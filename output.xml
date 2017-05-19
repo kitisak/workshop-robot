@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20170519 16:22:34.203" generator="Robot 3.0.2 (Python 2.7.10 on darwin)">
+<suite source="/Users/somkiat/data/slide/robot-framework/try-env/epit_forgot_passsword.robot" id="s1" name="Epit Forgot Passsword">
+<test id="s1-t1" name="Check alert box">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>https://epit.rd.go.th/EFILING/RegController</arg>
+<arg>browser=gc</arg>
+</arguments>
+<msg timestamp="20170519 16:22:34.373" level="INFO">Opening browser 'gc' to base url 'https://epit.rd.go.th/EFILING/RegController'</msg>
+<status status="PASS" endtime="20170519 16:22:38.940" starttime="20170519 16:22:34.373"></status>
+</kw>
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>สัญชาติไทย</arg>
+</arguments>
+<msg timestamp="20170519 16:22:38.942" level="INFO">Clicking link 'สัญชาติไทย'.</msg>
+<status status="PASS" endtime="20170519 16:22:41.247" starttime="20170519 16:22:38.941"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//*[@id="iNext"]/table/tbody/tr/td/a</arg>
+</arguments>
+<msg timestamp="20170519 16:22:41.247" level="INFO">Clicking element 'xpath=//*[@id="iNext"]/table/tbody/tr/td/a'.</msg>
+<status status="PASS" endtime="20170519 16:22:41.396" starttime="20170519 16:22:41.247"></status>
+</kw>
+<kw name="Get Alert Message" library="Selenium2Library">
+<doc>Returns the text of current JavaScript alert.</doc>
+<assign>
+<var>${result}</var>
+</assign>
+<msg timestamp="20170519 16:22:41.925" level="INFO">${result} = ข้อความปฏิเสธ [E011] :  กรุณาบันทึกทึกเลขประจำตัวผู้เสียภาษีอากร</msg>
+<status status="PASS" endtime="20170519 16:22:41.925" starttime="20170519 16:22:41.397"></status>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${result}</arg>
+<arg>[E011]</arg>
+</arguments>
+<status status="PASS" endtime="20170519 16:22:41.926" starttime="20170519 16:22:41.926"></status>
+</kw>
+<kw type="teardown" name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20170519 16:22:42.142" starttime="20170519 16:22:41.927"></status>
+</kw>
+<status status="PASS" endtime="20170519 16:22:42.143" critical="yes" starttime="20170519 16:22:34.372"></status>
+</test>
+<test id="s1-t2" name="Ok from confirm dialog">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>https://epit.rd.go.th/EFILING/RegController</arg>
+<arg>browser=gc</arg>
+</arguments>
+<msg timestamp="20170519 16:22:42.147" level="INFO">Opening browser 'gc' to base url 'https://epit.rd.go.th/EFILING/RegController'</msg>
+<status status="PASS" endtime="20170519 16:22:46.521" starttime="20170519 16:22:42.146"></status>
+</kw>
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>สัญชาติไทย</arg>
+</arguments>
+<msg timestamp="20170519 16:22:46.523" level="INFO">Clicking link 'สัญชาติไทย'.</msg>
+<status status="PASS" endtime="20170519 16:22:48.708" starttime="20170519 16:22:46.522"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//*[@id="iExit"]/table/tbody/tr/td/a</arg>
+</arguments>
+<msg timestamp="20170519 16:22:48.709" level="INFO">Clicking element 'xpath=//*[@id="iExit"]/table/tbody/tr/td/a'.</msg>
+<status status="PASS" endtime="20170519 16:22:48.884" starttime="20170519 16:22:48.709"></status>
+</kw>
+<kw name="Confirm Action" library="Selenium2Library">
+<doc>Dismisses currently shown confirmation dialog and returns it's message.</doc>
+<status status="PASS" endtime="20170519 16:22:49.072" starttime="20170519 16:22:48.884"></status>
+</kw>
+<kw name="Location Should Be" library="Selenium2Library">
+<doc>Verifies that current URL is exactly `url`.</doc>
+<arguments>
+<arg>http://epit.rd.go.th/publish/index.php</arg>
+</arguments>
+<msg timestamp="20170519 16:22:50.268" level="INFO">Current location is 'http://epit.rd.go.th/publish/index.php'.</msg>
+<status status="PASS" endtime="20170519 16:22:50.268" starttime="20170519 16:22:49.073"></status>
+</kw>
+<kw type="teardown" name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20170519 16:22:50.392" starttime="20170519 16:22:50.268"></status>
+</kw>
+<status status="PASS" endtime="20170519 16:22:50.392" critical="yes" starttime="20170519 16:22:42.144"></status>
+</test>
+<test id="s1-t3" name="Cancel from confirm dialog">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>https://epit.rd.go.th/EFILING/RegController</arg>
+<arg>browser=gc</arg>
+</arguments>
+<msg timestamp="20170519 16:22:50.395" level="INFO">Opening browser 'gc' to base url 'https://epit.rd.go.th/EFILING/RegController'</msg>
+<status status="PASS" endtime="20170519 16:22:54.337" starttime="20170519 16:22:50.394"></status>
+</kw>
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>สัญชาติไทย</arg>
+</arguments>
+<msg timestamp="20170519 16:22:54.339" level="INFO">Clicking link 'สัญชาติไทย'.</msg>
+<status status="PASS" endtime="20170519 16:22:56.511" starttime="20170519 16:22:54.338"></status>
+</kw>
+<kw name="Choose Cancel On Next Confirmation" library="Selenium2Library">
+<doc>Cancel will be selected the next time `Confirm Action` is used.</doc>
+<status status="PASS" endtime="20170519 16:22:56.512" starttime="20170519 16:22:56.512"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//*[@id="iExit"]/table/tbody/tr/td/a</arg>
+</arguments>
+<msg timestamp="20170519 16:22:56.513" level="INFO">Clicking element 'xpath=//*[@id="iExit"]/table/tbody/tr/td/a'.</msg>
+<status status="PASS" endtime="20170519 16:22:56.718" starttime="20170519 16:22:56.513"></status>
+</kw>
+<kw name="Confirm Action" library="Selenium2Library">
+<doc>Dismisses currently shown confirmation dialog and returns it's message.</doc>
+<status status="PASS" endtime="20170519 16:22:56.851" starttime="20170519 16:22:56.719"></status>
+</kw>
+<kw name="Location Should Be" library="Selenium2Library">
+<doc>Verifies that current URL is exactly `url`.</doc>
+<arguments>
+<arg>https://epit.rd.go.th/EFILING/RegController#</arg>
+</arguments>
+<msg timestamp="20170519 16:22:56.882" level="INFO">Current location is 'https://epit.rd.go.th/EFILING/RegController#'.</msg>
+<status status="PASS" endtime="20170519 16:22:56.883" starttime="20170519 16:22:56.851"></status>
+</kw>
+<kw type="teardown" name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20170519 16:22:57.031" starttime="20170519 16:22:56.883"></status>
+</kw>
+<status status="PASS" endtime="20170519 16:22:57.031" critical="yes" starttime="20170519 16:22:50.393"></status>
+</test>
+<status status="PASS" endtime="20170519 16:22:57.033" starttime="20170519 16:22:34.205"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="3">Critical Tests</stat>
+<stat fail="0" pass="3">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="Epit Forgot Passsword" pass="3">Epit Forgot Passsword</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
